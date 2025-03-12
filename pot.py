@@ -88,7 +88,7 @@ def log_malicious_activity():
 @app.route('/')
 def index():
     logging.info(f"Connection from {request.remote_addr} - {request.headers.get('User-Agent')}")
-    return render_template('fake_login.html')  # Render the HTML template
+    return render_template('index.html')  # Render the HTML template
 
 @app.route('/login', methods=['POST'])
 def login():
